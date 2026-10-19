@@ -1,0 +1,31 @@
+UN DÍA, UN RETO — instalación gratuita
+
+INCLUYE
+- App web con 365 retos preparados, categorías, botón para marcar como completado y progreso.
+- Código de widget para Scriptable en iPhone.
+- Sin IA ni servicios de pago.
+
+PUBLICAR EN GITHUB PAGES
+1. Descomprime el ZIP.
+2. En GitHub crea un repositorio NUEVO llamado Un-Dia-Un-Reto y déjalo en Public.
+3. Pulsa Add file > Upload files.
+4. Sube index.html, style.css, app.js, challenges.js y manifest.json directamente a la raíz del repositorio.
+5. En Settings > Pages, selecciona Deploy from a branch, rama main y carpeta /(root); guarda.
+6. Espera unos minutos. URL: https://TU-USUARIO.github.io/Un-Dia-Un-Reto/
+7. En el iPhone, abre la URL en Safari > Compartir > Añadir a pantalla de inicio.
+
+WIDGET CUADRADO
+1. Instala Scriptable desde el App Store (el uso básico es gratuito).
+2. Abre widget-scriptable.js en el ordenador y copia todo el código.
+3. Pásalo al iPhone mediante Notas, correo u otro método.
+4. Abre Scriptable, pulsa +, pega el código y guarda como "Un reto".
+5. Mantén pulsada la pantalla de inicio > + > Scriptable y añade un widget.
+6. Mantén pulsado el widget > Editar widget > Script > selecciona "Un reto".
+
+AVISO DIARIO A LAS 07:00
+Atajos > Automatización > + > Hora del día > 07:00 > Diariamente. Añade Mostrar notificación con el texto: "Tu reto de hoy te espera en el widget. Haz que cuente." Activa ejecución automática si aparece. Es un recordatorio fijo, no lee el reto exacto. iOS controla cuándo se refrescan los widgets, así que no se puede garantizar el cambio exacto a las 07:00.
+
+NOTAS
+- La app incluye 365 retos únicos; el reto diario se selecciona según la fecha y puedes pulsar "Ver otro reto" para explorar.
+- El progreso se guarda en el navegador del dispositivo y no se sincroniza automáticamente.
+- La primera visita requiere internet; una vez cargada, los archivos del sitio siguen alojados en GitHub Pages.
