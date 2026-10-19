@@ -1,5 +1,10 @@
 const $=id=>document.getElementById(id);
-const now=new Date();const start=new Date(now.getFullYear(),0,0);const day=Math.floor((now-start)/86400000);const dailyIndex=(day-1)%CHALLENGES.length;const current=dailyIndex;
+const now=new Date();
+// El día del reto empieza a las 07:00, no a medianoche.
+const challengeDate=new Date(now);if(now.getHours()<7)challengeDate.setDate(challengeDate.getDate()-1);
+const start=new Date(challengeDate.getFullYear(),0,0);const day=Math.floor((challengeDate-start)/86400000);const dailyIndex=(day-1+CHALLENGES.length)%CHALLENGES.length;const current=dailyIndex;
+// Si la app permanece abierta, recárgala al próximo cambio de reto (07:00).
+const nextChange=new Date(now);nextChange.setHours(7,0,0,0);if(nextChange<=now)nextChange.setDate(nextChange.getDate()+1);setTimeout(()=>location.reload(),Math.max(1000,nextChange-now));
 $('date').textContent=new Intl.DateTimeFormat('es-ES',{weekday:'short',day:'numeric',month:'short'}).format(now).toUpperCase();
 function getDone(){try{return JSON.parse(localStorage.getItem('udr-done')||'[]')}catch{return []}}
 function render(){const c=CHALLENGES[current];$('challenge').textContent=c.text;$('category').textContent=c.category;$('count').textContent='RETO '+String(current+1).padStart(3,'0')+' / 365';$('done').textContent=getDone().includes(current)?'✓ Completado':'○ Marcar hecho';}

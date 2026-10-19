@@ -29,3 +29,10 @@ NOTAS
 - La app incluye 365 contenidos diarios sin repetir frases ni retos; el reto diario se selecciona según la fecha y los temas están mezclados y solo se muestra el reto correspondiente a la fecha actual; no hay botón para consultar los próximos retos.
 - El progreso se guarda en el navegador del dispositivo y no se sincroniza automáticamente.
 - La primera visita requiere internet; una vez cargada, los archivos del sitio siguen alojados en GitHub Pages.
+
+
+CAMBIO DE RETO A LAS 07:00
+- La app y el script del widget usan ahora las 07:00 como inicio del día del reto. Antes de esa hora se mantiene el reto anterior.
+- Para actualizar GitHub, sube y confirma los archivos nuevos app.js y widget-scriptable.js.
+- En Scriptable, abre el script Reto diario y sustituye todo su código por el contenido actualizado de widget-scriptable.js.
+- iOS decide cuándo refresca los widgets, así que el widget puede actualizarse con retraso aunque la app web use la hora de las 07:00.
